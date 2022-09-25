@@ -9,3 +9,51 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
+
+/* Loader Animation */
+
+.k {
+  animation: k 1s infinite;
+}
+
+.r {
+  animation: r 1s infinite;
+}
+.s {
+  animation: s 1s infinite;
+}
+
+@keyframes k {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes r {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes s {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
