@@ -1,8 +1,11 @@
 import Header from 'components/Header'
 import React from 'react'
 import About from './About'
+import Contact from './Contact'
+import Courses from './Courses'
 import Experiences from './Experiences'
 import Intro from './Intro'
+import Projects from './Projects'
 
 function Home() {
   return (
@@ -12,6 +15,9 @@ function Home() {
         <Intro/>
         <About/>
         <Experiences/>
+        <Projects/>
+        <Courses/>
+        <Contact/>
       </div>
     </div>
   )
