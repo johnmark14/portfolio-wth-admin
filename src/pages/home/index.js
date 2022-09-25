@@ -1,3 +1,4 @@
+import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
 import About from './About'
@@ -19,6 +20,7 @@ function Home() {
         <Courses/>
         <Contact/>
       </div>
+      <Footer/>
     </div>
   )
 }
