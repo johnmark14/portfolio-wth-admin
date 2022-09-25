@@ -14,9 +14,9 @@ function Contact() {
   return (
     <div>
       <SectionTitle title={"Say Hello"} />
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         <div className="flex items-center">
-          <pre className="text-accent">
+          <pre className="text-accent sm:text-sm">
             {JSON.stringify(info, undefined, 2)}
           </pre>
         </div>
