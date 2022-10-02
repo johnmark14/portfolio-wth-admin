@@ -1,24 +1,29 @@
 import { Tabs } from "antd";
 import React from "react";
+import { useSelector } from "react-redux";
 import Header from "../../components/Header";
 import AdminAbout from "./AdminAbout";
 import AdminIntro from "./AdminIntro";
-function index() {
+function Admin() {
+  // @ts-ignore
+  const { portfolioData } = useSelector((rootState) => rootState.root);
   return (
     <div>
       <Header />
-      <div className="px-3">
-      <Tabs defaultActiveKey="1">
-        <Tabs.TabPane tab="Intro" key="1">
-          <AdminIntro/>
-        </Tabs.TabPane>
-        <Tabs.TabPane tab="About" key="2">
-          <AdminAbout/>
-        </Tabs.TabPane>
-      </Tabs>
-      </div>
+      {portfolioData && (
+        <div className="px-3">
+          <Tabs defaultActiveKey="1">
+            <Tabs.TabPane tab="Intro" key="1">
+              <AdminIntro portfolioData={portfolioData}/>
+            </Tabs.TabPane>
+            <Tabs.TabPane tab="About" key="2">
+              <AdminAbout />
+            </Tabs.TabPane>
+          </Tabs>
+        </div>
+      )}
     </div>
   );
 }
 
-export default index;
+export default Admin;
